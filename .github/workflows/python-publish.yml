@@ -20,7 +20,7 @@ jobs:
     # retrieve your distributions here
 
     - name: test
-      run: ls -la
+      run: ls ${{ github.workspace }}
 
     - name: build-package
       run: pip wheel . -w dist --no-deps --isolated
