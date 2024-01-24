@@ -21,12 +21,9 @@ jobs:
     
     - name: Check out repository code
       uses: actions/checkout@v4.1.1
-      
-    - name: test
-      run: ls ${{ github.workspace }}
 
     - name: build-package
-      run: pip wheel . -w dist --no-deps --isolated
+      run: pip wheel . -w dist --no-deps
 
     - name: pypi-publish   
       uses: pypa/gh-action-pypi-publish@v1.8.11
