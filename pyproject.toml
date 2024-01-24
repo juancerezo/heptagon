@@ -9,7 +9,6 @@ dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file= "LICENSE.md"}
-repository = "https://github.com/juancerezo/heptagon"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
