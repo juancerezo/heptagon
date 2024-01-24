@@ -3,13 +3,13 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hexagon"
+name = "heptagon"
 description = ""
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.10.*"
 license = "MIT"
-repository = "https://github.com/juancerezo/hexagon"
+repository = "https://github.com/juancerezo/heptagon"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
@@ -23,7 +23,7 @@ dependencies = [
 
 
 [project.scripts]
-hx = "hexagon:cli"
+hx = "heptagon:cli"
 
 [tool.setuptools.packages.find]
 where = ["."]
@@ -31,7 +31,7 @@ include = ["*"]
 namespaces = true
 
 [tool.setuptools.dynamic]
-version = {attr = "hexagon.__version__"}
+version = {attr = "heptagon.__version__"}
 
 [tool.pyright]
 typeCheckingMode = "lax"
