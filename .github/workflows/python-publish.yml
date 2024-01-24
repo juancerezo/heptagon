@@ -19,6 +19,9 @@ jobs:
     steps:
     # retrieve your distributions here
 
+    - name: test
+      run: ls -la
+
     - name: build-package
       run: pip wheel . -w dist --no-deps --isolated
 
