@@ -7,7 +7,7 @@ name = "heptagon"
 description = ""
 dynamic = ["version"]
 readme = "README.md"
-requires-python = ">=3.10.*"
+requires-python = ">=3.10.0"
 license = "MIT"
 repository = "https://github.com/juancerezo/heptagon"
 classifiers = [
