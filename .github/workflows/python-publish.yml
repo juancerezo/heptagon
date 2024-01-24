@@ -1,6 +1,5 @@
 # .github/workflows/python-publish.yml
 on:
-  workflow_dispatch: {}
   release:
     types: [published]
 
