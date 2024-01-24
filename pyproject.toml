@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hexagon"
+description = ""
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.10.*"
+license = "MIT"
+repository = "https://github.com/juancerezo/hexagon"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+authors = [
+    {name = "Juan Cerezo"},
+]
+
+dependencies = [
+
+]
+
+
+[project.scripts]
+hx = "hexagon:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+namespaces = true
+
+[tool.setuptools.dynamic]
+version = {attr = "hexagon.__version__"}
+
+[tool.pyright]
+typeCheckingMode = "lax"
+
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
