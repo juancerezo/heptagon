@@ -1,11 +1,12 @@
 # .github/workflows/python-publish.yml
 on:
+  workflow_dispatch: {}
   release:
     types: [published]
 
 permissions:
   contents: read
-  
+
 jobs:
   pypi-publish:
     name: Upload release to PyPI
@@ -17,6 +18,9 @@ jobs:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
     # retrieve your distributions here
+
+    - name: build-package
+      run: pip wheel . -w dist --no-deps --isolated
 
     - name: pypi-publish   
       uses: pypa/gh-action-pypi-publish@v1.8.11
